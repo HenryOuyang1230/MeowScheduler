@@ -1,7 +1,7 @@
 /**
  * @author Henry.Ouyang
  * @since 2020/05/06
- * @version 1.0 (2020/05/06)
+ * @version 1.0.1 (2020/05/07)
  */
 
 public class Schedule {
@@ -27,8 +27,10 @@ public class Schedule {
 	
 	/**
 	 * Create a new object
-	 * @param dow an integer representing the specific day of a week, i.e. 1 = Monday, 2 = Tuesday, etc. 
-	 * @param iInt a TimeInterval representing the interval of time in the schedule
+	 * @param sType a {@code String} representing types of schedule (Lecture, Tutorial, Lab, etc.)
+	 * @param sID a {@code String} representing ID of the schedule (101, L1N, etc.)
+	 * @param dow an integer representing the specific day of a week (1 = Monday, 2 = Tuesday, etc.) 
+	 * @param iInt a {@code TimeInterval} object representing the interval of time in the schedule
 	 */
 	public Schedule(String sType, String sID, String dow, TimeInterval tInt) {
 		scheduleType = sType;
@@ -40,7 +42,7 @@ public class Schedule {
 	//Assessors
 	/**
 	 * Return the type of the schedule(Lecture, Lab, Tutorial, etc.)
-	 * @return a String value containing the type of the schedule
+	 * @return a {@code String} value containing the type of the schedule
 	 */
 	public String getScheduleType() {
 		return scheduleType;
@@ -48,7 +50,7 @@ public class Schedule {
 	
 	/**
 	 * Return the ID of the Schedule;
-	 * @return a String value representing the ID of the schedule
+	 * @return a {@code String} value representing the ID of the schedule
 	 */
 	public String getScheduleID() {
 		return scheduleID;
@@ -64,7 +66,7 @@ public class Schedule {
 	
 	/**
 	 * Return the time interval
-	 * @return a TimeInterval object representing the interval of time in the schedule
+	 * @return a {@code TimeInterval} object representing the interval of time in the schedule
 	 */
 	public TimeInterval getTimeInterval() {
 		TimeInterval tInt = new TimeInterval(timeInterval.getBegin(), timeInterval.getEnd());
@@ -72,12 +74,13 @@ public class Schedule {
 	}
 	
 	/**
-	 * Determine whether the Schedule overlaps with another Schedule
-	 * @param otherSchedule another Schedule object value for overlap determination (no minimum minute between two Schedule set)
-	 * @return a boolean value representing if it overlaps another Schedule object
-	 * @see Schedule.isOverlapping(Schedule otherSchedule, int minGapMinute)
+	 * Determine whether the schedule overlaps another schedule
+	 * @param otherSchedule another {@code Schedule} object value for overlap determination (no minimum minute between two Schedule set, {@link })
+	 * @return a boolean value representing if it overlaps another {@code Schedule} object
+	 * @see {@code Schedule.isOverlapping(Schedule otherSchedule, int minGapMinute)}
 	 */
 	public boolean isOverlapping(Schedule otherSchedule) {
+		//FIXME determining whether on the same days of a week, to be fixed. 
 		//on different days
 		if(!this.dayOfWeek.equals(otherSchedule.dayOfWeek)) {
 			return false;
@@ -93,11 +96,11 @@ public class Schedule {
 	}
 	
 	/**
-	 * Determine whether the Schedule overlaps with another Schedule
-	 * @param otherSchedule another Schedule object value for overlap determination
-	 * @param minGapMinute an integer representing the minimum minute between two Schedule(default to 0 if not given)
-	 * @return a boolean value representing if overlaps another Schedule object
-	 * @see Schedule.isOverlapping(Schedule otherSchedule)
+	 * Determine whether the schedule overlaps another schedule
+	 * @param otherSchedule another {@code Schedule} object value for overlap determination
+	 * @param minGapMinute an integer (default to 0 if not given) representing the minimum minute between two {@code Schedule} objects
+	 * @return a boolean value representing if overlaps another {@code Schedule} object
+	 * @see {@code Schedule.isOverlapping(Schedule otherSchedule)}
 	 */
 	public boolean isOverlapping(Schedule otherSchedule, int minGapMinute) {
 		//TODO to be complete

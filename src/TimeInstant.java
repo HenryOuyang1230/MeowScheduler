@@ -1,7 +1,7 @@
 /**
  * @author Henry.Ouyang
  * @since 2020/05/06
- * @version 1.0 (2020/05/06)
+ * @version 1.0.1 (2020/05/07)
  */
 
 public class TimeInstant {
@@ -33,14 +33,23 @@ public class TimeInstant {
 	}
 	
 	//Assessors
+	/**
+	 * @return an integer of the hour value
+	 */
 	public int getHour() {
 		return hour;
 	}
 	
+	/**
+	 * @return an integer of the minute value
+	 */
 	public int getMinute() {
 		return minute;
 	}
 	
+	/**
+	 * @return an integer of the second value
+	 */
 	public int getSecond() {
 		return second;
 	}
@@ -56,8 +65,8 @@ public class TimeInstant {
 	/**
 	 * Compare the sequence (early or late) of this and another one time instant. 
 	 * Return a positive value if earlier and a negative value if later. 
-	 * @param otherTimeInstant 
-	 * @return the difference of seconds (from 00:00) between this instant and another TimeInstant object
+	 * @param otherTimeInstant another {@code TimeInstant} object for comparison
+	 * @return the difference of seconds (from 00:00) between this instant and another {@code TimeInstant} object
 	 */
 	public long compareToSec(TimeInstant otherTimeInstant) {
 		return this.ofSec() - otherTimeInstant.ofSec();
@@ -65,8 +74,8 @@ public class TimeInstant {
 	
 	/**
 	 * Determine whether this instant is later than another time instant
-	 * @param otherTimeInstant another TimeInstant object for comparison
-	 * @return a boolean value representing whether it is later than another TimeInstant object
+	 * @param otherTimeInstant another {@code TimeInstant} object for comparison
+	 * @return a boolean value representing whether it is later than another {@code TimeInstant} object
 	 */
 	public boolean isLater(TimeInstant otherTimeInstant) {
 		return this.compareToSec(otherTimeInstant) > 0;
@@ -76,6 +85,7 @@ public class TimeInstant {
 	 * Formatted output
 	 */
 	public String toString() {
+		//XXX could be updated
 		return String.format("%02d:%02d:%02d", hour, minute, second);
 	}
 }

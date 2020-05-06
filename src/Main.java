@@ -1,10 +1,9 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 /**
  * @author Henry.Ouyang
  * @since 2020/05/03
- * @version 1.0 (2020/05/06)
+ * @version 1.0.1 (2020/05/07)
  */
 
 public class Main {
@@ -25,10 +24,11 @@ public class Main {
 		
 		Schedule sche1_1 = new Schedule("Lecture", "101", "MWF", interval1);
 		Schedule sche1_2 = new Schedule("Tutorial", "L1N", "M", interval1);
-		ArrayList<Schedule> scheList1 = new ArrayList<Schedule>();
+		//ArrayList<Schedule> scheList1 = new ArrayList<Schedule>();
 		
+		//Adding schedules
 		Course course1 = new Course("CPSC101");
-		course1.getscheduleList().add(sche1_1);
+		course1.addSchedule(sche1_1, sche1_2);
 		
 
 		Course.printCourse(course1);

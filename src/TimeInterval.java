@@ -1,7 +1,7 @@
 /**
  * @author Henry.Ouyang
  * @since 2020/05/06
- * @version 1.0 (2020/05/06)
+ * @version 1.0.1 (2020/05/07)
  */
 
 
@@ -31,7 +31,7 @@ public class TimeInterval {
 	//Assessors
 	/**
 	 * Return the begin instant
-	 * @return a TimeInstant object representing the begin instant
+	 * @return a {@code TimeInstant} object representing the begin instant
 	 */
 	public TimeInstant getBegin() {
 		TimeInstant beginInstant = new TimeInstant(tBegin.getHour(), tBegin.getMinute(), tBegin.getSecond());
@@ -40,7 +40,7 @@ public class TimeInterval {
 	
 	/**
 	 * Return the end instant
-	 * @return a TimeInstant object representing the end instant
+	 * @return a {@code TimeInstant} object representing the end instant
 	 */
 	public TimeInstant getEnd() {
 		TimeInstant endInstant = new TimeInstant(tEnd.getHour(), tEnd.getMinute(), tEnd.getSecond());
