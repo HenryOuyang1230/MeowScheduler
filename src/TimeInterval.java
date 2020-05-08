@@ -53,4 +53,19 @@ public class TimeInterval {
 	public String toString() {
 		return tBegin.toString() + " - " + tEnd.toString();
 	}
+	
+	//Mutators
+	/**
+	 * Extends the time interval from the beginning or ending time instant. 
+	 * @param minutesExtended an integer containing the number of minutes for extending. 
+	 * Positive if extending from the end of interval, and negative if extending from the beginning. 
+	 */
+	public void extendMinute(int minutesExtended) {
+		if(minutesExtended > 0) {
+			//TODO
+		}
+		if(minutesExtended < 0) {
+			//TODO
+		}
+	}
 }

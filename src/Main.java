@@ -15,6 +15,8 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		//XXX For the use of debug, not functionally implemented yet. 
+		
 		TimeInstant begin1 = new TimeInstant(8, 30, 0);
 		TimeInstant end1 = new TimeInstant(9, 30, 0);
 		
@@ -32,6 +34,6 @@ public class Main {
 		
 
 		Course.printCourse(course1);
+		
 	}
-
 }

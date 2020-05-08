@@ -88,4 +88,56 @@ public class TimeInstant {
 		//XXX could be updated
 		return String.format("%02d:%02d:%02d", hour, minute, second);
 	}
+	
+	//Mutators
+	/**
+	 * Add seconds to the current time instant. 
+	 * The values will be ensured to be within the right ranges by automatically 
+	 * calling {@link fixDisplayedTime()} by the end of the method. 
+	 * @param secondsAdded an integer containing the number of seconds add to the time instant, could be either positive or negative. 
+	 * @see {@code TimeInstant.fixDisplayedTime()}  
+	 */
+	public void addSeconds(int secondsAdded) {
+		//TODO
+		
+		fixDisplayedTime();
+	}
+	
+	/**
+	 * Add minutes to the current time instant. 
+	 * The values will be ensured to be within the right ranges by automatically 
+	 * calling {@link fixDisplayedTime()} by the end of the method.
+	 * @param minutesAdded an integer containing the number of minutes add to the time instant, could be either positive or negative. . 
+	 * @see {@code TimeInstant.fixDisplayedTime()}  
+	 */
+	public void addMinutes(int minutesAdded) {
+		//TODO
+		
+		fixDisplayedTime();
+	}
+	
+	/**
+	 * Add hours to the current time instant. 
+	 * The values will be ensured to be within the right ranges by automatically 
+	 * calling {@link fixDisplayedTime()} by the end of the method.
+	 * @param hoursAdded an integer containing the number of hours add to the time instant, could be either positive or negative. . 
+	 * @see {@code TimeInstant.fixDisplayedTime()}  
+	 */
+	public void addHours(int hoursAdded) {
+		//TODO
+		
+		fixDisplayedTime();
+	}
+	
+	/**
+	 * To be called ONLY in this class.
+	 * Fix the values of hour, minute, and seconds if not within ranges. 
+	 * To be called right after the values are modified. 
+	 * @see {@code TimeInstant.addSeconds(int secondsAdded)}
+	 * @see {@code TimeInstant.addMinutes(int minutesAdded)}
+	 * @see {@code TimeInstant.addHours(int hoursAdded)}
+	 */
+	private void fixDisplayedTime() {
+		//TODO
+	}
 }
