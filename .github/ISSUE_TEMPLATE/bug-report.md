@@ -41,7 +41,7 @@ Steps to reproduce the behavior:
 ### Additional context
 *Add any other context about the problem here.*
 
-### Contacts (optional)
+### Contacts
 *Please leave any of your contact information for follow-up communications.*
 
  - Name: 
