@@ -7,12 +7,12 @@ assignees: ''
 
 ---
 
-**Please report ONE bug in each report.**
+### Please report ONE bug in each report.
 
-**Describe the bug**
+### Describe the bug
 *Clearly describe what the bug is.*
 
-**To Reproduce**
+### To Reproduce
 *Please use the example below or in other ways.*
 
 Steps to reproduce the behavior:
@@ -21,16 +21,16 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
+### Expected behavior
 *Describe what you expected to happen.*
 
-**Related Files (optional)**
+### Related Files (optional)
 *Which file(s) of source code do you think the bug is related to?*
 
-**Screenshots**
+### Screenshots
 *If applicable, add screenshots to help explain your problem.*
 
-**Environment**
+### Environment
 *Please complete the following information or leave it blank if not applicable.*
 
  - OS: [e.g. Windows 10, macOS Catalina]
@@ -38,10 +38,10 @@ Steps to reproduce the behavior:
  - Device (optional): [e.g. HP Envy 13 Laptop]
  - JRE Version (optional): [e.g. JRE 7 1.8.0]
 
-**Additional context**
+### Additional context
 *Add any other context about the problem here.*
 
-**Contacts (optional)**
+### Contacts (optional)
 *Please leave any of your contact information for follow-up communications.*
 
  - Name: 
