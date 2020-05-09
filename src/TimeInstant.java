@@ -1,7 +1,7 @@
 /**
  * @author Henry.Ouyang
  * @since 2020/05/06
- * @version 1.0.1 (2020/05/07)
+ * @version 1.0.1 (2020/05/09)
  */
 
 public class TimeInstant {
@@ -30,6 +30,7 @@ public class TimeInstant {
 		this.hour = hour;
 		this.minute = minute;
 		this.second = second;
+		fixDisplayedTime();
 	}
 	
 	//Assessors
@@ -98,8 +99,7 @@ public class TimeInstant {
 	 * @see {@code TimeInstant.fixDisplayedTime()}  
 	 */
 	public void addSeconds(int secondsAdded) {
-		//TODO
-		
+		this.second += secondsAdded;
 		fixDisplayedTime();
 	}
 	
@@ -111,8 +111,7 @@ public class TimeInstant {
 	 * @see {@code TimeInstant.fixDisplayedTime()}  
 	 */
 	public void addMinutes(int minutesAdded) {
-		//TODO
-		
+		this.minute += minutesAdded;
 		fixDisplayedTime();
 	}
 	
@@ -124,8 +123,7 @@ public class TimeInstant {
 	 * @see {@code TimeInstant.fixDisplayedTime()}  
 	 */
 	public void addHours(int hoursAdded) {
-		//TODO
-		
+		this.hour = hoursAdded;
 		fixDisplayedTime();
 	}
 	
@@ -138,6 +136,18 @@ public class TimeInstant {
 	 * @see {@code TimeInstant.addHours(int hoursAdded)}
 	 */
 	private void fixDisplayedTime() {
-		//TODO
+		if(second >= 60) {
+			int toMinute = second / 60;
+			minute += toMinute;
+			second %= 60;
+		}
+		if(minute >= 60) {
+			int toHour = minute / 60;
+			hour += toHour;
+			minute %= 60;
+		}
+		if(hour >= 24) {
+			hour -= 24;
+		}
 	}
 }

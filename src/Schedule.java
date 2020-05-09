@@ -80,7 +80,6 @@ public class Schedule {
 	 * @see {@code Schedule.isOverlapping(Schedule otherSchedule, int minGapMinute)}
 	 */
 	public boolean isOverlapping(Schedule otherSchedule) {
-		//FIXME determining whether on the same days of a week, to be fixed. 
 		//on different days
 		if(!this.dayOfWeek.equals(otherSchedule.dayOfWeek)) {
 			return false;
@@ -103,7 +102,7 @@ public class Schedule {
 	 * @see {@code Schedule.isOverlapping(Schedule otherSchedule)}
 	 */
 	public boolean isOverlapping(Schedule otherSchedule, int minGapMinute) {
-		//TODO to be complete
+		//TODO to be complete later
 		return true;
 	}
 }

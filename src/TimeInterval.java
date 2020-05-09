@@ -1,7 +1,7 @@
 /**
  * @author Henry.Ouyang
  * @since 2020/05/06
- * @version 1.0.1 (2020/05/07)
+ * @version 1.0.1 (2020/05/09)
  */
 
 
@@ -62,10 +62,10 @@ public class TimeInterval {
 	 */
 	public void extendMinute(int minutesExtended) {
 		if(minutesExtended > 0) {
-			//TODO
+			tEnd.addMinutes(minutesExtended);
 		}
 		if(minutesExtended < 0) {
-			//TODO
+			tBegin.addMinutes(minutesExtended);
 		}
 	}
 }
