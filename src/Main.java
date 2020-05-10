@@ -29,7 +29,7 @@ public class Main {
 		Schedule sche1_2 = new Schedule("Tutorial", "L1N", "MWF", interval2);
 		
 		//Adding schedules
-		Course course1 = new Course("CPSC101");
+		Course course1 = new Course("CPSC110", 4);
 		course1.addSchedule(sche1_1, sche1_2);
 		
 		Course.printCourse(course1);
@@ -46,5 +46,8 @@ public class Main {
 		System.out.println(interval1);
 		
 		System.out.println(course1.getscheduleList().get(0).isOverlapping(course1.getscheduleList().get(1), 30));
+		
+		//Testing timetable
+		Timetable timeTable = new Timetable();
 	}
 }

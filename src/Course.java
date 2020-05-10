@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Course {
 	
 	private String courseID;
+	private int credits;
 	private ArrayList<Schedule> scheduleList;
 	
 	//Constructors
@@ -17,29 +18,49 @@ public class Course {
 	 */
 	public Course() {
 		courseID = "N/A";
+		credits = 0;
 		scheduleList = new ArrayList<Schedule>();
 	}
 
 	/**
 	 * Create a new object
 	 * @param cID class id, i.e. CS101
+	 * @param creditsAssigned an positive integer containing the credits assigned to the course
 	 * @param sList an {@code ArrayList} containing the initial list of schedules in the course
 	 */
-	public Course(String cID, ArrayList<Schedule> sList) {
+	public Course(String cID, int creditsAssigned, ArrayList<Schedule> sList) {
 		courseID = cID;
+		credits = creditsAssigned;
 		scheduleList = sList;
 	}
 	
 	/**
 	 * Create a new object
 	 * @param cID class id, i.e. CS101
+	 * @param creditsAssigned an positive integer containing the credits assigned to the course
 	 */
-	public Course(String cID) {
+	public Course(String cID, int creditsAssigned) {
 		courseID = cID;
+		credits = creditsAssigned;
 		scheduleList = new ArrayList<Schedule>();
 	}
 	
 	//Assessors
+	/** Return the course ID
+	 * @return an {@code String} object containing the ID of the course 
+	 */
+	public String getCourseID() {
+		return courseID;
+	}
+	
+	/**
+	 * Return the credits assigned to the course
+	 * @return an positive integer containing the cresits assigned to the course
+	 */
+	public int getCredits() {
+		return credits;
+	}
+	
 	/**
 	 * Return the schedule list
 	 * @return an {@code ArrayList} containing the full list of schedules in the course
@@ -76,7 +97,7 @@ public class Course {
 	 * @param course a {@code Course} object for printing
 	 */
 	public static void printCourse(Course course) {
-		System.out.println("--------------------------" + course.courseID + "--------------------------");
+		System.out.println("------------------------" + course.courseID + " (" + course.credits + ")------------------------");
 		for (int i=0; i<course.scheduleList.size(); i++) {
 			System.out.println(course.courseID + " " + course.scheduleList.get(i).getScheduleID() + "\t" + 
 					course.scheduleList.get(i).getScheduleType() + "\0\t" + 
