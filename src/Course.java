@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * @author Henry.Ouyang
  * @since 2020/05/06
- * @version 1.0.1 (2020/05/07)
+ * @version 1.0.1 (2020/05/11)
  */
 
 public class Course {
@@ -67,6 +67,14 @@ public class Course {
 	 */
 	public ArrayList<Schedule> getscheduleList() {
 		return scheduleList;
+	}
+	
+	/**
+	 * Overriding the {@code toString()} method
+	 * @return a {@code String} object containing the ID of the course. 
+	 */
+	public String toString() {
+		return courseID;
 	}
 	
 	//Mutators

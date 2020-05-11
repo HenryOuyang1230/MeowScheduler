@@ -65,3 +65,13 @@ NO standard versions available.
     - Some of the methods above, labeled `//TODO`, have not been tested.
 4. Modified static method `printCourse()` in `Course.java`;
 
+#### Update 200512 (Important)
+1. Added some static methods in the `Timetable` class, for testing.
+2. Overrided `toString()` method in `Course` class.
+3. Implemented some Javadoc comments in `Timetable.java`. 
+4. Modified the implementation of some mutator in `Timetable` class.
+    - `void addCourse(Course... courseAdded)`
+    - `void deleteCourse(Course courseDeleted)`
+5. Tested all previous methods. 
+6. Declared `void autoSchedule()` in `Timetable` class, to be implemented. 
+

@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * @author Henry.Ouyang
  * @since 2020/05/03
- * @version 1.0.1 (2020/05/09)
+ * @version 1.0.1 (2020/05/11)
  */
 
 public class Main {
@@ -32,6 +32,8 @@ public class Main {
 		Course course1 = new Course("CPSC110", 4);
 		course1.addSchedule(sche1_1, sche1_2);
 		
+		Course course2 = new Course("MUSC110", 3);
+		
 		Course.printCourse(course1);
 		
 		//Testing time display
@@ -48,6 +50,10 @@ public class Main {
 		System.out.println(course1.getscheduleList().get(0).isOverlapping(course1.getscheduleList().get(1), 30));
 		
 		//Testing timetable
-		Timetable timeTable = new Timetable();
+		Timetable timetable = new Timetable("Winter 2020");
+		timetable.addCourse(course1, course2, course2);
+		timetable.deleteCourse(course2);
+		
+		Timetable.printTimetable(timetable);
 	}
 }
