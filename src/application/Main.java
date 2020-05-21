@@ -1,3 +1,4 @@
+package application;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,9 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		
+		
 		//XXX For the use of debug, not functionally implemented yet. 
 		
 		TimeInstant begin1 = new TimeInstant(8, 30, 0);
@@ -37,7 +41,7 @@ public class Main {
 		Course.printCourse(course1);
 		
 		//Testing time display
-		TimeInstant time = new TimeInstant(24, 40, 0);
+		TimeInstant time = new TimeInstant(24, 40, 0); 
 		System.out.println(time);
 		time.addMinutes(80);
 		System.out.println(time);

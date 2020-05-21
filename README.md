@@ -75,3 +75,22 @@ NO standard versions available.
 5. Tested all previous methods. 
 6. Declared `void autoSchedule()` in `Timetable` class, to be implemented. 
 
+#### Update 200521 (TOP-Priority)
+1. Modify the program structure.
+    - All previous functional classes are moved to newly-created package `application`.
+        - `Course.java`
+        - `Main.java`
+        - `Schedule.java`
+        - `TimeInstant.java`
+        - `TimeInterval.java`
+        - `Timetable.java`
+    - Newly created UI classes and JavaFX-related files are moved into package `window`. 
+        - `MainUI.java`
+        - `MainWindowController.java`
+        - `application.css`
+        - `MainWindow.fxml`
+2. The UI are created with JavaFX 2, using FXML. 
+    - Main window created, see `MainWindow.fxml`. 
+3. The main program is modified to `window/MainUI.java`, previous main program `application/Main.java` will be temporarily kept for the tests in the `application` package, but will be removed soon. 
+4. `window/MainWindowController.java` created; some event listeners are declared without implementations. 
+
