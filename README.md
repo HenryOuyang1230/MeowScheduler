@@ -94,3 +94,11 @@ NO standard versions available.
 3. The main program is modified to `window/MainUI.java`, previous main program `application/Main.java` will be temporarily kept for the tests in the `application` package, but will be removed soon. 
 4. `window/MainWindowController.java` created; some event listeners are declared without implementations. 
 
+#### Update 200522 (Regular)
+1. Re-structure the layout of `window/MainWindow.fxml`.
+    - Using `VBox` for root layout; 
+    - Wrapping `Menubar` and `AnchorPane` into `VBox`;
+2. Other slight changes on UI and event listeners. 
+
+
+

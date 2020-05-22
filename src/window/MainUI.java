@@ -2,9 +2,9 @@ package window;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MainUI extends Application {
@@ -16,13 +16,16 @@ public class MainUI extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			AnchorPane root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
+			VBox root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
 			
 			//Setting size of main window
-			Scene scene = new Scene(root);
+			Scene scene = new Scene(root, 1000, 600);
+			
+			//Setting CSS
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.centerOnScreen();
 			primaryStage.setScene(scene); 
-			primaryStage.setResizable(true);
+			primaryStage.setResizable(false);
 			primaryStage.setTitle("MeowScheduler");
 			primaryStage.show();
 		} catch(Exception e) {
