@@ -100,5 +100,9 @@ NO standard versions available.
     - Wrapping `Menubar` and `AnchorPane` into `VBox`;
 2. Other slight changes on UI and event listeners. 
 
-
+#### Update 200523 (Regular)
+1. Created `AlertWindow.fxml` and `AlertWindowController.java` for alert template, **will not be used in main program**. 
+2. Created and implemented exit-confirm window layout and functions. 
+    - To exit the program, click "File - Exit - OK". 
+3. Other slight changes on UI and event listeners. 
 
