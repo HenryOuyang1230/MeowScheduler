@@ -7,6 +7,7 @@ import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -59,15 +60,15 @@ public class MainWindowController {
 	// Event Listener on MenuItem[#MENUITEM_FILE_NEW].onAction
 	@FXML
 	public void eventNew(ActionEvent event) {
-		// XXX
+		// FIXME errors on widget sizes and layouts, tried: anchorpane, vbox, pane(same), gridpane(not applicable)
 		try {
 			Stage newWindow = new Stage();
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("NewWindow.fxml"));
-			AnchorPane root = loader.<AnchorPane>load();
-			Scene scene = new Scene(root);
+			//FXMLLoader loader = new FXMLLoader(getClass().getResource("NewWindow.fxml"));
+			VBox root = FXMLLoader.load(getClass().getResource("NewWindow.fxml"));
+			Scene scene = new Scene(root, 500, 300);
 			newWindow.setScene(scene); 
-			newWindow.setResizable(true);
-			newWindow.setTitle("MeowScheduler - New Timetable");
+			newWindow.setResizable(false);
+			newWindow.setTitle("New Timetable");
 			newWindow.show();
 		} catch(Exception e) {
 			e.printStackTrace();

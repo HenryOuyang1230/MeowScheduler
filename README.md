@@ -106,3 +106,10 @@ NO standard versions available.
     - To exit the program, click "File - Exit - OK". 
 3. Other slight changes on UI and event listeners. 
 
+#### Update 200525 (Regular)
+1. Created `NewWindow.fxml` and controller `NewWindowController.java` for pop-up window of creating a new timetable. 
+    - Window layout in error, **TO BE FIXED**, see //FIXME in `MainWindowController.eventNew()`. 
+    - Relevant event listeners implemented in `MainWindowController.java`. 
+2. Other slight changes. 
+
+
