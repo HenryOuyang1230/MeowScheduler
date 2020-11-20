@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.MainWindowController">
+   <children>
+      <MenuBar prefHeight="41.0" prefWidth="1000.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem id="MENUITEM_FILE_NEW" fx:id="MENUITEM_FILE_NEW" mnemonicParsing="false" onAction="#eventNew" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem id="MENUITEM_FILE_OPEN" fx:id="MENUITEM_FILE_OPEN" mnemonicParsing="false" onAction="#eventOpen" text="Open" />
+                  <MenuItem id="MENUITEM_FILE_CLOSE" fx:id="MENUITEM_FILE_CLOSE" mnemonicParsing="false" onAction="#eventClose" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Export as...">
+                    <items>
+                      <MenuItem id="MENUITEM_FILE_EXPORTAS_TEXTFILE" fx:id="MENUITEM_FILE_EXPORTAS_TEXTFILE" mnemonicParsing="false" onAction="#eventExportasTextfile" text="Text File (.txt)" />
+                        <MenuItem id="MENUITEM_FILE_EXPORTAS_EXCEL" fx:id="MENUITEM_FILE_EXPORTAS_EXCEL" mnemonicParsing="false" onAction="#eventExportasExcel" text="Excel (.xls)" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="MENUITEM_EXIT" fx:id="MENUITEM_EXIT" mnemonicParsing="false" onAction="#eventExit" text="Exit" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem id="MENUITEM_EDIT_ADDCOURSES" fx:id="MENUITEM_EDIT_ADDCOURSES" mnemonicParsing="false" onAction="#eventAddCourses" text="Add Course(s)">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="MENUITEM_EDIT_CUT" fx:id="MENUITEM_EDIT_CUT" mnemonicParsing="false" onAction="#eventCut" text="Cut">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem id="MENUITEM_EDIT_COPY" fx:id="MENUITEM_EDIT_COPY" mnemonicParsing="false" onAction="#eventCopy" text="Copy">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem id="MENUITEM_EDIT_PASTE" fx:id="MENUITEM_EDIT_PASTE" mnemonicParsing="false" onAction="#eventPaste" text="Paste">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="V" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem id="MENUITEM_EDIT_DELETE" fx:id="MENUITEM_EDIT_DELETE" mnemonicParsing="false" onAction="#eventDelete" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Program">
+              <items>
+                <MenuItem id="MENUITEM_PROGRAM_AUTOSCHEDULE" fx:id="MENUITEM_PROGRAM_AUTOSCHEDULE" mnemonicParsing="false" onAction="#eventAutoSchedule" text="Auto-schedule">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Window">
+               <items>
+                  <Menu mnemonicParsing="false" text="Theme">
+                     <items>
+                        <RadioMenuItem id="MENUITEM_WINDOW_THEME_MODENA" fx:id="MENUITEM_WINDOW_THEME_MODENA" mnemonicParsing="false" onAction="#eventThemeSetModena" selected="true" text="Modena (Default)">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="toggleTheme" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENUITEM_WINDOW_THEME_CASPIAN" fx:id="MENUITEM_WINDOW_THEME_CASPIAN" mnemonicParsing="false" onAction="#eventThemeSetCaspian" text="Caspian" toggleGroup="$toggleTheme" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem id="MENUITEM_HELP_ABOUT" fx:id="MENUITEM_HELP_ABOUT" mnemonicParsing="false" onAction="#eventAbout" text="About" />
+                  <MenuItem id="MENUITEM_HELP_CHECKFORUPDATES" fx:id="MENUITEM_HELP_CHECKFORUPDATES" mnemonicParsing="false" onAction="#eventCheckForUpdates" text="Check for Updates" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane opacity="0.8" prefHeight="604.0" prefWidth="1000.0" />
+   </children>
+</VBox>

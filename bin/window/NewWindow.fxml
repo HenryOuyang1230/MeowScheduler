@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.NewWindowController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="500.0">
+         <children>
+            <Label fx:id="LABEL_SESSION" layoutX="77.0" layoutY="84.0" prefHeight="33.0" prefWidth="90.0" text="Session: " />
+            <TextField fx:id="TEXT_SESSION" layoutX="167.0" layoutY="81.0" onInputMethodTextChanged="#eventInput" promptText="eg. 2020W1" />
+         </children>
+      </Pane>
+      <Pane prefHeight="60.0" prefWidth="268.0">
+         <children>
+            <Button fx:id="BTN_CANCEL" cancelButton="true" layoutX="264.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eventCancel" prefHeight="39.0" prefWidth="102.0" text="Cancel" />
+            <Button fx:id="BTN_OK" defaultButton="true" disable="true" layoutX="384.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eventOK" prefHeight="39.0" prefWidth="102.0" text="OK" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
